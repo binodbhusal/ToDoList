@@ -1,3 +1,6 @@
+import './style.css';
+import populateTaskList from '../modules/functions.js';
+
 const tasks = [
   {
     description: 'Car wash',
@@ -20,3 +23,4 @@ const tasks = [
     index: 3,
   },
 ];
+populateTaskList(tasks);
