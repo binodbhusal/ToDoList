@@ -43,8 +43,7 @@ A typical implementation involve a form to enter a new task, a list of tasks wit
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-To get a local copy up and running, follow these steps.
-
+use npm start command to run this app.
 ### Prerequisites
 
 In order to run this project you need:
