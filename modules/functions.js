@@ -1,5 +1,8 @@
 export const taskEntry = document.getElementById('txtTask');
 export const tasks = [];
+const setStorage = () => {
+  localStorage.setItem('taskData', JSON.stringify(tasks));
+};
 const taskPopulate = (tasks) => {
   const taskList = document.getElementById('container');
   taskList.innerHTML = tasks.map((task) => `
@@ -11,6 +14,7 @@ const taskPopulate = (tasks) => {
     `).join('');
   const removeTask = (index) => {
     tasks.splice(index, 1);
+    setStorage(tasks);
     taskPopulate(tasks);
   };
 
@@ -23,6 +27,7 @@ const taskPopulate = (tasks) => {
     });
   }
 };
+
 export const addList = () => {
   const taskDescription = taskEntry.value;
 
@@ -34,6 +39,7 @@ export const addList = () => {
   };
 
   tasks.push(newTask);
+  setStorage(tasks);
   taskPopulate(tasks);
   taskEntry.value = '';
 };
