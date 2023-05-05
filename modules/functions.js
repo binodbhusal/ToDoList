@@ -3,7 +3,7 @@ export const tasks = [];
 const setStorage = () => {
   localStorage.setItem('taskData', JSON.stringify(tasks));
 };
-const taskPopulate = (tasks) => {
+export const taskPopulate = (tasks) => {
   const taskList = document.getElementById('container');
   taskList.innerHTML = tasks.map((task) => `
     <div class="task ${task.completed ? 'completed' : ''}">
@@ -32,7 +32,7 @@ const taskPopulate = (tasks) => {
     });
   }
   const editTask = (index) => {
-    const label = document.querySelector(`label[for='${index}']`);
+    const label = document.querySelector(`label[for='${index + 1}']`);
     const currentText = label.innerText.trim();
     const input = document.createElement('input');
     input.type = 'text';
@@ -74,6 +74,10 @@ const taskPopulate = (tasks) => {
     });
   }
 };
+export const getStorage = (task) => {
+  task = JSON.parse(localStorage.getItem('taskData')) || [];
+  return task;
+};
 
 export const addList = () => {
   const taskDescription = taskEntry.value;
@@ -82,9 +86,9 @@ export const addList = () => {
 
     description: taskDescription,
     completed: false,
-    index: tasks.length,
+    index: tasks.length + 1,
   };
-
+  getStorage(tasks);
   tasks.push(newTask);
   setStorage(tasks);
   taskPopulate(tasks);
