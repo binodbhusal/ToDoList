@@ -1,5 +1,9 @@
 export const taskEntry = document.getElementById('txtTask');
-export const tasks = [];
+export const getStorage = (task) => {
+  task = JSON.parse(localStorage.getItem('taskData')) || [];
+  return task;
+};
+export const tasks = getStorage();
 export const setStorage = () => {
   localStorage.setItem('taskData', JSON.stringify(tasks));
 };
@@ -82,10 +86,6 @@ export const taskPopulate = (tasks) => {
     });
   });
 };
-export const getStorage = (task) => {
-  task = JSON.parse(localStorage.getItem('taskData')) || [];
-  return task;
-};
 
 export const addList = () => {
   const taskDescription = taskEntry.value;
@@ -100,6 +100,8 @@ export const addList = () => {
   tasks.push(newTask);
   setStorage(tasks);
   taskPopulate(tasks);
+  taskEntry.value = '';
+
   taskEntry.value = '';
 };
 export const removeCompletedTask = () => {
