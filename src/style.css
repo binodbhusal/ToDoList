@@ -2,35 +2,37 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: azure;
+  background-color: #182747;
   font-family: 'Poppins', sans-serif;
 }
 
 .box {
-  background-color: #fff;
+  background-color: #146c94;
   display: flex;
   flex-direction: column;
   width: 40%;
   height: auto;
-  margin: auto auto;
+  margin: 50px auto;
   box-shadow: 5px 5px 8px #d3d3d3;
 }
 
 #enterForm > input {
-  width: 90%;
+  width: 88%;
   padding: 1% 1%;
   border: none;
   border-bottom: 1px solid #d3d3d3;
   outline: none;
   font-style: italic;
   font-size: 1em;
-  margin-left: 0.5em;
+  margin-left: 1em;
+  border-radius: 10px;
+  height: 20px;
 }
 
 #enterForm > button {
   background: transparent;
   border: none;
-  color: #d3d3d3;
+  color: #a5c0dd;
   cursor: pointer;
 }
 
@@ -45,17 +47,26 @@ body {
   margin: 0;
   padding-top: 2.5%;
   padding-bottom: 2.5%;
-  border: 1px solid #d3d3d3;
   margin-top: 1em;
   cursor: pointer;
+  background-color: #3c4048;
+  color: #b2b2b2;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  font-size: 1em;
 }
 
 h2 {
   margin-left: 0.5em;
+  color: #feff86;
 }
 
 hr {
-  color: #d3d3d3;
+  border: 0.8px solid #a5c0dd;
+  margin: 0;
+  padding: 0;
+  width: 88%;
+  margin-left: 0.6em;
 }
 
 #container {
@@ -70,18 +81,18 @@ hr {
 }
 
 .fa {
-  color: #d3d3d3;
+  color: #a5c0dd;
 }
 
 .btnremove {
-  font-size: 1.5em;
+  font-size: 1.2em;
   border: none;
   background: transparent;
   margin-top: -20px;
 }
 
 .fa:hover {
-  color: red;
+  color: #ff6969;
   cursor: pointer;
 }
 
@@ -91,16 +102,16 @@ hr {
 }
 
 .btnEdit {
-  font-size: 1.5em;
+  font-size: 1.2em;
   border: none;
   background: transparent;
   margin-top: -28px;
-  color: #d3d3d3;
+  color: #a5c0dd;
   margin-right: 25px;
 }
 
 .btnEdit:hover {
-  color: #19376d;
+  color: #19a7ce;
 }
 
 .txtInput {
@@ -110,6 +121,15 @@ hr {
 }
 
 #clearBtn:hover {
-  background: #fff;
-  color: red;
+  background: #dbdfea;
+  color: #ff6969;
+}
+
+label {
+  color: #feff86;
+  font-family: 'Poppins', sans-serif;
+}
+
+.chkBox {
+  margin-left: -8px;
 }

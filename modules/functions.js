@@ -12,7 +12,7 @@ export const taskPopulate = (tasks) => {
   taskList.innerHTML = tasks.map((task) => `
     <div class="task ${task.completed ? 'completed' : ''}">
     <input type="checkbox" ${task.completed ? 'checked' : ''}id="${task.index}">
-    <label for = "${task.index}"> "${task.description}"</label>
+    <label for = "${task.index}"> ${task.description}</label>
     <div class="remove"><button class="btnremove"><i class="fa">&#xf014;</i></button></div>
     <div class="remove"><button class="btnEdit"><i class="fa-solid fa-pen-to-square"></i></button></div>
 
