@@ -65,14 +65,15 @@ In order to run this project you need:
 ### Install
 
 Install this project with:
-- No need to install this project just Open index.html in your Browser.
+-  cd ToDoList-App
+   npm install
 
 
 ### Usage
 To run the project, follow these instructions:
+Or, if you have setup NPM and Node.js, you have run a localhost using the following command:
 
-  - After Cloning this repo to your local machine.
-  - Open the index.html in your browser.
+  npm run start
 
 ### Run tests
 To run tests, run the following command:

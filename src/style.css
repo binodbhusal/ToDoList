@@ -61,3 +61,50 @@ hr {
 #container {
   margin-left: 0.5em;
 }
+
+.remove {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  margin: auto;
+}
+
+.fa {
+  color: #d3d3d3;
+}
+
+.btnremove {
+  font-size: 1.5em;
+  border: none;
+  background: transparent;
+  margin-top: -20px;
+}
+
+.fa:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.task {
+  margin-top: 10px;
+  margin-left: 1em;
+}
+
+.btnEdit {
+  font-size: 1.5em;
+  border: none;
+  background: transparent;
+  margin-top: -28px;
+  color: #d3d3d3;
+  margin-right: 25px;
+}
+
+.btnEdit:hover {
+  color: #19376d;
+}
+
+.txtInput {
+  border: none;
+  width: 80%;
+  height: 30px;
+}

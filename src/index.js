@@ -1,26 +1,15 @@
 import './style.css';
-import populateTaskList from '../modules/functions.js';
+import {
+  addList, taskEntry, taskPopulate, getStorage, tasks,
+} from '../modules/functions.js';
 
-const tasks = [
-  {
-    description: 'Car wash',
-    completed: true,
-    index: 0,
-  },
-  {
-    description: 'Grocery shopping',
-    completed: false,
-    index: 1,
-  },
-  {
-    description: 'Evening walk',
-    completed: true,
-    index: 2,
-  },
-  {
-    description: 'Do laundry',
-    completed: false,
-    index: 3,
-  },
-];
-populateTaskList(tasks);
+taskEntry.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    addList(tasks);
+  }
+});
+const pageLoad = (tasks) => {
+  tasks = getStorage();
+  taskPopulate(tasks);
+};
+pageLoad();
