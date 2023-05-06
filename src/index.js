@@ -1,6 +1,6 @@
 import './style.css';
 import {
-  addList, taskEntry, taskPopulate, getStorage, tasks,
+  addList, taskEntry, taskPopulate, getStorage, tasks, removeCompletedTask,
 } from '../modules/functions.js';
 
 taskEntry.addEventListener('keydown', (event) => {
@@ -13,3 +13,10 @@ const pageLoad = (tasks) => {
   taskPopulate(tasks);
 };
 pageLoad();
+const clearBtn = document.getElementById('clearBtn');
+if (clearBtn) {
+  clearBtn.addEventListener('click', () => {
+    removeCompletedTask();
+    taskPopulate(tasks);
+  });
+}
