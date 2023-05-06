@@ -21,5 +21,11 @@
   "ignorePatterns": [
     "dist/",
     "build/"
-  ]
+  ],
+  "settings": {
+    "import/core-modules": [
+      "copy-webpack-plugin"
+
+    ]
+  }
 }
