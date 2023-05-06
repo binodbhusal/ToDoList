@@ -1,0 +1,63 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: azure;
+  font-family: 'Poppins', sans-serif;
+}
+
+.box {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: auto;
+  margin: auto auto;
+  box-shadow: 5px 5px 8px #d3d3d3;
+}
+
+#enterForm > input {
+  width: 90%;
+  padding: 1% 1%;
+  border: none;
+  border-bottom: 1px solid #d3d3d3;
+  outline: none;
+  font-style: italic;
+  font-size: 1em;
+  margin-left: 0.5em;
+}
+
+#enterForm > button {
+  background: transparent;
+  border: none;
+  color: #d3d3d3;
+  cursor: pointer;
+}
+
+#clear {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#clear > button {
+  width: 100%;
+  margin: 0;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+  border: 1px solid #d3d3d3;
+  margin-top: 1em;
+  cursor: pointer;
+}
+
+h2 {
+  margin-left: 0.5em;
+}
+
+hr {
+  color: #d3d3d3;
+}
+
+#container {
+  margin-left: 0.5em;
+}
